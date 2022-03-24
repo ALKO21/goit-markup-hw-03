@@ -25,12 +25,19 @@ body {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /* header */
 
-.header {
-  padding: 24px 0 25px 215px;
-  outline: 2px solid tomato;
+.container {
   display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .logo {
@@ -40,7 +47,6 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--color-logo);
-  outline: 2px solid tomato;
   margin-right: 93px;
   padding: 0;
 }
@@ -48,23 +54,29 @@ body {
   color: #000000;
 }
 
+.header-li-list {
+  margin-right: 50px;
+}
+.header-li-contact {
+  margin-left: 50px;
+}
+
 .header-list-menu,
 .header-list-contact {
   padding: 0;
-  margin: 32px 0 32px 0;
   display: flex;
-  outline: 2px solid tomato;
 }
 
 .header-list-contact {
-  margin-left: 331px;
+  margin-left: auto;
+  padding: 0;
 }
 
 .header-link,
 .contacts-mail,
 .contacts-phone {
-  margin-right: 50px;
-  outline: 2px solid tomato;
+  padding: 32px 0;
+  display: block;
 }
 
 .header-link,
@@ -75,17 +87,6 @@ body {
   color: inherit;
   letter-spacing: 0.02em;
   line-height: 1.14;
-  outline: 2px solid tomato;
-}
-
-.header-list-menu,
-.header-list-contact,
-.features-list,
-.actions-list,
-.team-list,
-.address-list,
-.projects-list {
-  list-style: none;
 }
 
 .header-link:hover,
