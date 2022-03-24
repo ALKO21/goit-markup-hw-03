@@ -41,18 +41,29 @@ body {
   text-decoration: none;
   color: var(--color-logo);
   outline: 2px solid tomato;
-  /* margin-right: 93px; */
+  margin-right: 93px;
+  padding: 0;
 }
 .header-logo-accent {
   color: #000000;
 }
 
-.header-list {
-  outline: 2px solid tomato;
+.header-list-menu,
+.header-list-contact {
+  padding: 0;
+  margin: 32px 0 32px 0;
   display: flex;
+  outline: 2px solid tomato;
 }
-.header-link {
-  margin-left: 50px;
+
+.header-list-contact {
+  margin-left: 331px;
+}
+
+.header-link,
+.contacts-mail,
+.contacts-phone {
+  margin-right: 50px;
   outline: 2px solid tomato;
 }
 
@@ -67,7 +78,8 @@ body {
   outline: 2px solid tomato;
 }
 
-.header-list,
+.header-list-menu,
+.header-list-contact,
 .features-list,
 .actions-list,
 .team-list,
