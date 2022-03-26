@@ -45,16 +45,25 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ececec;
 }
 /* logo */
-.logo {
+
+.header .logo {
   margin-right: 93px;
   padding: 0;
+}
 
+.logo {
   font-size: 26px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -110,19 +119,19 @@ body {
 }
 
 /* hero */
+
 .hero {
-  /* margin: 0 0 94px 0; */
   margin: auto;
   align-items: center;
   text-align: center;
-  width: 1170px;
+  /* width: 1170px; */
   /* height: 600px; */
 
   background: rgba(47, 48, 58, 1);
   text-align: center;
 }
 .hero-title {
-  /* padding: 200px 452px 80px 452px; */
+  /* padding: 200px 252px 80px 252px; */
 
   color: var(--color-white);
   font-weight: 900;
@@ -147,14 +156,11 @@ body {
   align-items: center;
   text-align: center;
   font-family: inherit;
-
-  outline: 2px solid blueviolet;
 }
 /* our_features */
 
 .features-list {
   display: flex;
-  outline: 2px solid orange;
 }
 
 .features-list .feature-item + .feature-item {
@@ -163,7 +169,6 @@ body {
 
 .features-title {
   display: none;
-  outline: 2px solid orange;
 }
 
 .features-title2 {
@@ -171,15 +176,10 @@ body {
 
   text-transform: uppercase;
   font-size: 14px;
-
-  outline: 2px solid orange;
 }
 .features-text {
   color: var(--color-gray);
   line-height: 1.7;
-  /* margin-bottom: 94px; */
-
-  outline: 2px solid orange;
 }
 /* Actions */
 
@@ -190,12 +190,10 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-
-  outline: 2px solid tomato;
 }
 
 .actions-title {
-  /* margin: 50px; */
+  margin-bottom: 50px;
   /* display: block; */
 }
 .actions-list {
@@ -217,67 +215,77 @@ body {
   justify-content: center;
 }
 
-/* .team-list .item + .item {
-  margin-left: 30px;
-} */
+.team-list .items {
+  background-color: var(--color-white-background);
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-title {
+  margin-bottom: 50px;
+}
+
 .team-list .items + .items {
   margin-left: 30px;
 }
 
+.members-photo {
+  margin-bottom: 50px;
+}
+
 .member-name {
   text-align: center;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  margin: 0;
-
-  outline: 2px solid tomato;
 }
 .team-text {
-  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
 
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--color-gray);
-
-  outline: 2px solid tomato;
 }
 
 .team-list .img {
-  outline: 2px solid tomato;
 }
 
 /* footer */
 .footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: #2f303a;
   line-height: 1.7;
   font-style: normal;
-
-  outline: 2px solid tomato;
 }
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .footer-logo-accent {
   color: var(--color-white);
-
-  outline: 2px solid tomato;
 }
 .footer-adress {
   text-decoration: none;
   color: var(--color-white);
   font-style: normal;
-
-  outline: 2px solid tomato;
 }
 .footer-mail,
 .footer-phone {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
-
-  outline: 2px solid tomato;
 }
+
 /* our_projects */
 
 .projects-hiddentitle {
@@ -287,15 +295,10 @@ body {
 .projects-list-buttons {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
-
-  outline: 2px solid tomato;
 }
 .projects-list-buttons .item + .item {
   margin-left: 8px;
-
-  outline: 2px solid tomato;
 }
 .project-button {
   display: inline-block;
@@ -310,7 +313,6 @@ body {
   font-family: inherit;
   border-radius: 4px;
   border: none;
-  outline: 2px solid tomato;
 }
 .project-button:hover {
   padding: 0px 22px 0px 22px;
@@ -331,6 +333,11 @@ body {
 
 .picture-def {
   margin-right: 30px;
+  /* margin-left: 30px;
+  margin-top: 30px; */
+
+  /* Не понимаю как сделать границу, чтобы не раздвинуть геометрию  */
+  /* border: 1px solid #ececec; */
 }
 
 .picture-def:nth-child(3n) {
@@ -340,42 +347,37 @@ body {
   margin-right: 0px;
 }
 
+.picture-def .img {
+  margin-bottom: 20px;
+}
+
 .projects-list-pictures {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
-  /* vertical-align: middle; */
-  outline: 2px solid tomato;
 }
 
 .team-list .img {
   margin-bottom: 20px;
   display: block;
-  outline: 2px solid tomato;
 }
 
 .project-titel2 {
+  margin-bottom: 2px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: center;
-
-  outline: 2px solid tomato;
+  text-align: left;
 }
 
 .project-text {
-  margin: 0;
-  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  text-align: left;
 
   font-size: 16px;
   line-height: 1, 88;
   letter-spacing: 0.03em;
   color: var(--color-gray);
-
-  outline: 2px solid tomato;
-}
-
-.el:nth-last-child(3n - 1) {
-  color: #2196f3;
 }
