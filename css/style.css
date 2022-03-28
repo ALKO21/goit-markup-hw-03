@@ -37,7 +37,12 @@ body {
   margin: 0;
 }
 
-/* header */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -45,16 +50,20 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
+/* header */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 /* logo */
 
@@ -121,17 +130,16 @@ body {
 /* hero */
 
 .hero {
-  margin: auto;
-  align-items: center;
-  text-align: center;
-  /* width: 1170px; */
-  /* height: 600px; */
-
   background: rgba(47, 48, 58, 1);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
-  /* padding: 200px 252px 80px 252px; */
+  width: 696px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
 
   color: var(--color-white);
   font-weight: 900;
@@ -167,8 +175,17 @@ body {
   margin-left: 30px;
 }
 
-.features-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-title2 {
@@ -180,6 +197,9 @@ body {
 .features-text {
   color: var(--color-gray);
   line-height: 1.7;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 /* Actions */
 
@@ -190,6 +210,10 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.actions {
+  padding-top: 0;
 }
 
 .actions-title {
@@ -206,7 +230,7 @@ body {
 }
 
 /* our_team */
-.team .container {
+.team {
   background-color: #f5f4fa;
 }
 
@@ -231,10 +255,6 @@ body {
   margin-left: 30px;
 }
 
-.members-photo {
-  margin-bottom: 50px;
-}
-
 .member-name {
   text-align: center;
   margin-bottom: 10px;
@@ -244,7 +264,6 @@ body {
   line-height: 1.19;
 }
 .team-text {
-  margin-bottom: 30px;
   text-align: center;
 
   font-size: 16px;
@@ -253,15 +272,21 @@ body {
   color: var(--color-gray);
 }
 
-.team-list .img {
+.name-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* footer */
+
+.footer {
+  background-color: #2f303a;
+}
+
 .footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: #2f303a;
   line-height: 1.7;
   font-style: normal;
 }
@@ -286,6 +311,10 @@ body {
   font-style: normal;
 }
 
+.address-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 /* our_projects */
 
 .projects-hiddentitle {
@@ -301,54 +330,36 @@ body {
   margin-left: 8px;
 }
 .project-button {
-  display: inline-block;
-  padding: 0px 22px 0px 22px;
+  padding: 6px 22px;
   text-align: center;
+  cursor: pointer;
 
   background-color: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  height: 26px;
   font-family: inherit;
   border-radius: 4px;
   border: none;
 }
-.project-button:hover {
-  padding: 0px 22px 0px 22px;
-  background-color: var(--color-logo);
+.project-button:hover,
+.project-button:focus {
   color: var(--color-white);
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  height: 26px;
-  font-family: inherit;
-  text-align: center;
-  border-radius: 4px;
-  border: none;
+  background-color: var(--color-logo);
 }
 
 /* project pictures */
 
 .picture-def {
   margin-right: 30px;
-  /* margin-left: 30px;
-  margin-top: 30px; */
-
-  /* Не понимаю как сделать границу, чтобы не раздвинуть геометрию  */
-  /* border: 1px solid #ececec; */
+  margin-bottom: 30px;
 }
 
 .picture-def:nth-child(3n) {
   margin-right: 0px;
 }
-.picture-def:last-child(3n) {
-  margin-right: 0px;
-}
-
-.picture-def .img {
-  margin-bottom: 20px;
+.picture-def:nth-child(n + 7) {
+  margin-bottom: 0px;
 }
 
 .projects-list-pictures {
@@ -361,9 +372,14 @@ body {
   display: block;
 }
 
+.title2-text {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
 .project-titel2 {
   margin-bottom: 2px;
-  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -372,10 +388,6 @@ body {
 }
 
 .project-text {
-  margin-bottom: 20px;
-  margin-left: 24px;
-  text-align: left;
-
   font-size: 16px;
   line-height: 1, 88;
   letter-spacing: 0.03em;
